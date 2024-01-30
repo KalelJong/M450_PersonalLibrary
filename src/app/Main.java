@@ -116,9 +116,30 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("----------------------------------------------------------");
-        System.out.println("Add book to list:");
-        System.out.println("What's the name of the list?");
-        String listName = scanner.nextLine();
+
+        String listName = null;
+        boolean listNameValidInput = false;
+        while (!listNameValidInput)
+        {
+            System.out.println("---------------");
+            for (var list: library.getBookLists()) {
+                System.out.println("[" + library.getBookLists().indexOf(list) + "] " + list.getName() + "  |  " + list.getCreator());
+            }
+            System.out.println("---------------");
+            System.out.println("Add book to list:");
+            System.out.println("What's the ID of the list?");
+            int idList = 0;
+
+            try {
+                idList = Integer.parseInt(scanner.nextLine());
+                listNameValidInput = true;
+                listName = library.getBookLists().get(idList).getName();
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid format! e.g., 19");
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Please enter a valid ID! e.g., 19");
+            }
+        }
 
         System.out.println("What's the book name?");
         String bookName = scanner.nextLine();

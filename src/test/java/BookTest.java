@@ -10,11 +10,11 @@ public class BookTest {
     static Book book;
     @BeforeAll
     public static void setUp(){
-        book = new Book("Discord Life", "Zakria Samma", 69, 2025, "Reading");
+        book = new Book("Stories of Lutz", "Zakria Samma", 69, 2023, Book.Status.Reading);
     }
 
     @Test
-    public void createTest(){
+    public void testCreateBook(){
         assertNotNull(book);
     }
 

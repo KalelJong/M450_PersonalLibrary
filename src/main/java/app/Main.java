@@ -1,9 +1,11 @@
 package app;
+import java.util.*;
 
 public class Main {
+    public Library library = new Library();
 
-    public static void main(String[] args){
-        UI ui = new UI();
-        ui.start();
+    public static void main(String[] args) {
+        LibraryApp app = new LibraryApp();
+        app.start();
     }
 }

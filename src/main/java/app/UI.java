@@ -127,7 +127,7 @@ public class UI {
             System.out.println("---------------");
             System.out.println("Add book to list:");
             System.out.println("What's the ID of the list?");
-            int idList = 0;
+            int idList;
 
             try {
                 idList = Integer.parseInt(scanner.nextLine());

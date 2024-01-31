@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bac85918-9b29-493c-993c-fdf01571c499" name="Changes" comment="Refactored Main">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/LibraryApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/BookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LibraryTest.java" afterDir="false" />
+    </list>
+    <list id="577fcee8-1eee-4e1a-9dc6-ab2e12b0fe40" name="Changes by Amars" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/UI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +30,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/test/java/BookTest.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="6" changelist="bac85918-9b29-493c-993c-fdf01571c499" />
+        <range start1="11" end1="12" start2="12" end2="13" changelist="577fcee8-1eee-4e1a-9dc6-ab2e12b0fe40" />
+        <range start1="15" end1="16" start2="16" end2="17" changelist="577fcee8-1eee-4e1a-9dc6-ab2e12b0fe40" />
+        <range start1="19" end1="19" start2="20" end2="86" changelist="bac85918-9b29-493c-993c-fdf01571c499" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -42,7 +55,18 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "JUnit.BookListTest.executor": "Run",
+    "JUnit.BookListTest.testAddBook.executor": "Run",
+    "JUnit.BookListTest.testFailAddBookBookExists.executor": "Run",
+    "JUnit.BookListTest.testFailRemoveBookBookNotFound.executor": "Run",
+    "JUnit.BookListTest.testFailRemoveBookListNotFound.executor": "Run",
+    "JUnit.BookListTest.testGetBookFromList.executor": "Run",
+    "JUnit.BookListTest.testRemoveBook.executor": "Run",
     "JUnit.BookTest.createTest.executor": "Run",
+    "JUnit.BookTest.executor": "Run",
+    "JUnit.LibraryTest.testAddList.executor": "Run",
+    "JUnit.LibraryTest.testFailChangeReadStatusListNotFound.executor": "Run",
+    "JUnit.LibraryTest.testGetBooklist.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -60,38 +84,51 @@
       <recent name="C:\Users\ext_poekal\Desktop\repos\PersonalLibrary\src\main\java\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.Main" />
-      <module name="PersonalLibrary" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.UI" />
-      <module name="PersonalLibrary" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookTest.createTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LibraryTest.testFailChangeReadStatusListNotFound">
+    <configuration name="BookListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersonalLibrary" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="createTest" />
+      <option name="MAIN_CLASS_NAME" value="BookListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookListTest.testFailAddBookBookExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BookListTest" />
+      <option name="METHOD_NAME" value="testFailAddBookBookExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testAddList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="METHOD_NAME" value="testAddList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testFailChangeReadStatusListNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="METHOD_NAME" value="testFailChangeReadStatusListNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testGetBooklist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="METHOD_NAME" value="testGetBooklist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,9 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BookTest.createTest" />
-        <item itemvalue="Application.UI" />
+        <item itemvalue="JUnit.LibraryTest.testGetBooklist" />
+        <item itemvalue="JUnit.LibraryTest.testFailChangeReadStatusListNotFound" />
+        <item itemvalue="JUnit.LibraryTest.testAddList" />
+        <item itemvalue="JUnit.BookListTest.testFailAddBookBookExists" />
+        <item itemvalue="JUnit.BookListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706639881976</updated>
       <workItem from="1706639882988" duration="2447000" />
-      <workItem from="1706705176589" duration="1758000" />
+      <workItem from="1706705176589" duration="7564000" />
     </task>
     <task id="LOCAL-00001" summary="Reformed proj">
       <option name="closed" value="true" />
@@ -165,5 +204,29 @@
     <MESSAGE value="Reformed proj" />
     <MESSAGE value="Refactored Main" />
     <option name="LAST_COMMIT_MESSAGE" value="Refactored Main" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/BookListTest.java</url>
+          <line>28</line>
+          <properties class="BookListTest" method="testAddBook">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/LibraryTest.java</url>
+          <line>121</line>
+          <properties class="LibraryTest" method="testFailChangeReadStatusListNotFound">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

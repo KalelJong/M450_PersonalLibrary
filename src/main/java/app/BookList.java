@@ -1,56 +1,41 @@
 package app;
-
+import app.Book;
 import java.util.*;
 
-public class BookList {
+public class BookList extends ArrayList<Book> {
     private String name;
     private String creator;
-    private List<Book> books = new ArrayList<>();
 
     public BookList(String name, String creator) {
         this.name = name;
         this.creator = creator;
     }
 
-    public boolean addBook(String bookName, String author, int publishedYear, int pages, String readingStatus) {
-        Book book = new Book(bookName, author, publishedYear, pages, readingStatus);
-        books.add(book);
-        return books.contains(book);
-    }
-
-    public boolean removeBook(String bookName) {
-        Book book = books.stream().filter(b -> b.getName().equals(bookName)).findFirst().orElse(null);
+    public boolean remove(String name) {
+        Book book = getFirstBookByName(name);
         if (book != null) {
-            books.remove(book);
-            return !books.contains(book);
+            return remove(book);
         }
         return false;
     }
 
-    public Book getBookByName(String name) {
-        return books.stream().filter(b -> b.getName().equals(name)).findFirst().orElse(null);
-    }
-
-    public void changeReadStatus(String name, String readingStatus) {
-        Book book = books.stream().filter(b -> b.getName().equals(name)).findFirst().orElse(null);
-        if (book != null) {
-            book.changeReadStatus(readingStatus);
-        }
-    }
-
-    public void changeName(String name) {
-        this.name = name;
+    public Book getFirstBookByName(String name) {
+        return this.stream().filter(b -> b.getName().equals(name)).findFirst().orElse(null);
     }
 
     public String getName() {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getCreator() {
         return creator;
     }
 
-    public List<Book> getBooks() {
-        return books;
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 }

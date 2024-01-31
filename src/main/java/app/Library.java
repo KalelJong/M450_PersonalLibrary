@@ -43,7 +43,7 @@ public class Library {
     public boolean addBook(String listName, String bookName, String author, int pages, int publishingYear, String readingStatus) {
         BookList list = bookLists.stream().filter(b -> b.getName().equals(listName)).findFirst().orElse(null);
         if (list != null && !list.getBooks().stream().anyMatch(b -> b.getName().equals(bookName))) {
-            return list.addBook(bookName, author, publishingYear, pages, readingStatus);
+            return list.addBook(bookName, author, pages, publishingYear, readingStatus);
         }
         return false;
     }

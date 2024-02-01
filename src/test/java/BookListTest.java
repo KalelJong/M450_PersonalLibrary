@@ -10,14 +10,13 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 public class BookListTest {
 
-    private BookList list; // Declare the list variable
-    private static final Book testBook = new Book("testBook", "testAuthor", 353, 1999, Book.Status.Reading);
-
-    @BeforeEach
-    public void setUp() {
-        // Initialize the list before each test
-        list = new BookList("Test", "Admin");
-    }
+    static BookList list = new BookList("Test", "Admin");
+    static  Book testBook = new Book("testBook", "testAuthor", 353, 1999, Book.Status.Reading);
+//    @BeforeEach
+//    public void setUp() {
+//        // Initialize the list before each test
+//
+//    }
 
     @Test
     public void testAddBook() {

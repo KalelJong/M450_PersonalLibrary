@@ -12,18 +12,18 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 public class LibraryTest {
 
-    private static Library library = new Library();
+    static Library library = new Library();
 
-    @BeforeAll
-    public static void beforeEach() {
-        library = new Library();
-        BookList bookList = new BookList("testList", "admin");
-        bookList.add(new Book("book1", "author1", 11, 2001, Book.Status.Reading));
-        bookList.add(new Book("book2", "author2", 12, 2002, Book.Status.Unknown));
-        bookList.add(new Book("book3", "author3", 13, 2003, Book.Status.Finished));
-        bookList.add(new Book("book4", "author4", 14, 2004, Book.Status.Dropped));
-        library.add(bookList);
-    }
+//    @BeforeAll
+//    public static void beforeEach() {
+//        library = new Library();
+//        BookList bookList = new BookList("testList", "admin");
+//        bookList.add(new Book("book1", "author1", 11, 2001, Book.Status.Reading));
+//        bookList.add(new Book("book2", "author2", 12, 2002, Book.Status.Unknown));
+//        bookList.add(new Book("book3", "author3", 13, 2003, Book.Status.Finished));
+//        bookList.add(new Book("book4", "author4", 14, 2004, Book.Status.Dropped));
+//        library.add(bookList);
+//    }
 
     @AfterEach
     public void afterEach() {

@@ -2,8 +2,8 @@ import app.*;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 public class BookTest {
-    static Book book= new Book("Stories of Lutz", "Zakria Samma", 69, 2023, Book.Status.Reading);
-//    @BeforeAll
+    static Book book= new Book("Stories of Lutz", "Zakria Samma", 69, 2023, Book.Status.Reading);;
+    //    @BeforeAll
 //    public static void setUp(){
 //    }
 

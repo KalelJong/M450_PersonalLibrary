@@ -14,13 +14,14 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class BookListTest {
 
+    private BookList list; // Declare the list variable
+    private static final Book testBook = new Book("testBook", "testAuthor", 353, 1999, Book.Status.Reading);
+
     @BeforeEach
     public void setUp() {
+        // Initialize the list before each test
         list = new BookList("Test", "Admin");
     }
-
-    private BookList list;
-    static  Book testBook = new Book("testBook", "testAuthor", 353, 1999, Book.Status.Reading);;
 
     @Test
     public void testAddBook() {
@@ -30,10 +31,11 @@ public class BookListTest {
 
     @Test
     public void testFailAddBookBookExists() {
-        list.add(testBook);
-        boolean result = list.add(testBook);
+        list.add(testBook); // First addition
+        boolean result = list.add(testBook); // Attempting to add again should fail
         assertFalse(result);
     }
+
 
 
     @Test

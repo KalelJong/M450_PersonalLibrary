@@ -14,16 +14,8 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class BookListTest {
 
-
-    BookList list;
-    Book testBook ;
-    @BeforeEach
-    public void setUp(){
-        list = new BookList("Test", "Admin");
-        testBook = new Book("testBook", "testAuthor", 353, 1999, Book.Status.Reading);
-//        book = new Book("Discord Life", "Zakria Samma", 69, 2025, Book.Status.Reading);
-
-    }
+    static BookList list = new BookList("Test", "Admin");
+    static  Book testBook = new Book("testBook", "testAuthor", 353, 1999, Book.Status.Reading);;
 
     @Test
     public void testAddBook() {
@@ -48,7 +40,7 @@ public class BookListTest {
 
     @Test
     public void testFailRemoveBookListNotFound() {
-        boolean result = list.remove( "testBook");
+        boolean result = list.remove( "notTestBook");
         assertFalse(result);
     }
 

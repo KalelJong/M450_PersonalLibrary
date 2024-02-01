@@ -14,7 +14,12 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class BookListTest {
 
-    static BookList list = new BookList("Test", "Admin");
+    @BeforeEach
+    public void setUp() {
+        list = new BookList("Test", "Admin");
+    }
+
+    private BookList list;
     static  Book testBook = new Book("testBook", "testAuthor", 353, 1999, Book.Status.Reading);;
 
     @Test

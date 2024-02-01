@@ -15,7 +15,8 @@ public class LibraryTest {
     private static Library library = new Library();
 
     @BeforeEach
-    public void setup() {
+    public void beforeEach() {
+        library = new Library();
         BookList bookList = new BookList("testList", "admin");
         bookList.add(new Book("book1", "author1", 11, 2001, Book.Status.Reading));
         bookList.add(new Book("book2", "author2", 12, 2002, Book.Status.Unknown));
@@ -32,7 +33,6 @@ public class LibraryTest {
 
     @Test
     public void testFailAddList() {
-        library.add(new BookList("testList", "admin"));
         boolean result = library.add(new BookList("testList", "admin"));
         assertFalse(result);
     }
@@ -58,7 +58,7 @@ public class LibraryTest {
 
     @Test
     public void testFailGetList() {
-        BookList bookList = library.get("test");
+        BookList bookList = library.get("NotAList");
         assertNull(bookList);
     }
 
@@ -69,7 +69,11 @@ public class LibraryTest {
 
     @Test
     public void testFailAddBookToList() {
-        assertThrowsExactly(NullPointerException.class ,()-> {library.get("notAList").add(new Book("book0", "author0", 10, 2000, Book.Status.Pending));});
+        // Setup: Ensure the "notAList" doesn't exist to cause the expected failure.
+        assertNull(library.get("notAList"), "Library should not contain 'notAList' before test.");
+
+        // Act & Assert: Trying to add a book to a non-existent list should throw.
+        assertThrowsExactly(NullPointerException.class ,() -> library.get("notAList").add(new Book("book0", "author0", 10, 2000, Book.Status.Pending)), "Expected NullPointerException when adding a book to a non-existent list.");
     }
 
     @Test

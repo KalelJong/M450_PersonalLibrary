@@ -1,10 +1,5 @@
 import app.*;
-import org.h2.engine.Database;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.*;
 public class BookTest {
     static Book book= new Book("Stories of Lutz", "Zakria Samma", 69, 2023, Book.Status.Reading);

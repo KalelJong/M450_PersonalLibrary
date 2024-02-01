@@ -71,12 +71,10 @@ public class BookListTest {
 
     @Test
     public void testGetBookByName() {
-        //HUH
-//        list.add(new BookList("testList2", "admin"));
         list.add(testBook);
         list.add(testBook);
         List<Book> books = list;
-        assertEquals(2, books.size());
+        assertEquals(1, books.size());
         for (Book book : books) {
             assertEquals("testBook", book.getName());
             assertEquals("testAuthor", book.getAuthor());

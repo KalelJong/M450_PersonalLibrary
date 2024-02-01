@@ -61,21 +61,4 @@ public class BookTest {
     public void testFailGetReadingStatus(){
         assertNotEquals(Book.Status.Finished, book.getReadingStatus());
     }
-
-    /*
-    @Test
-    public void testAddListWithMockedInput() {
-        Library library = Mockito.mock(Library.class);
-        LibraryApp libraryApp = new LibraryApp(library);
-
-        // Mocking user input for addList method
-        Mockito.when(libraryApp.readString("What's the name of the list?")).thenReturn("TestList");
-        Mockito.when(libraryApp.readString("What's your name?")).thenReturn("TestCreator");
-
-        libraryApp.addList();
-
-        // Verify that the add method of the mock Library is called with the expected parameters
-        Mockito.verify(library).add(Mockito.any(BookList.class));
-    }
-     */
 }

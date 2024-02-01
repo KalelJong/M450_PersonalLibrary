@@ -5,6 +5,7 @@ import java.util.*;
 public class BookList extends ArrayList<Book> {
     private String name;
     private String creator;
+    private BookApi bookApi;  // Dependency on the external service
 
     @Override
     public boolean add(Book book) {
@@ -19,6 +20,11 @@ public class BookList extends ArrayList<Book> {
     public BookList(String name, String creator) {
         this.name = name;
         this.creator = creator;
+    }
+    public BookList(String name, String creator, BookApi bookApi) {
+        this.name = name;
+        this.creator = creator;
+        this.bookApi = bookApi;
     }
 
     public boolean remove(String name) {
@@ -47,5 +53,8 @@ public class BookList extends ArrayList<Book> {
 
     public void setCreator(String creator) {
         this.creator = creator;
+    }
+    public boolean isBookAvailable(String bookName) {
+        return bookApi.isBookAvailable(bookName);
     }
 }

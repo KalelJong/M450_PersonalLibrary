@@ -6,16 +6,19 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import app.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class LibraryTest {
 
     static Library library = new Library();
 
-//    @BeforeAll
-//    public static void beforeEach() {
+//    @BeforeEach
+//    public void beforeEach() {
 //        library = new Library();
 //        BookList bookList = new BookList("testList", "admin");
 //        bookList.add(new Book("book1", "author1", 11, 2001, Book.Status.Reading));
@@ -132,4 +135,35 @@ public class LibraryTest {
         assertThrowsExactly(NullPointerException.class, ()-> { library.get("NotAList").getFirstBookByName("book1").setReadingStatus(Book.Status.Dropped);});
     }
 
+    @Test
+    public void isBookAvailable_WhenBookIsAvailable_ShouldReturnTrue() {
+        // Arrange
+        BookApi bookApiMock = Mockito.mock(BookApi.class);
+        when(bookApiMock.isBookAvailable("AvailableBook")).thenReturn(true);
+
+        BookList bookList = new BookList("MyList", "John Doe", bookApiMock);
+
+        // Act
+        boolean result = bookList.isBookAvailable("AvailableBook");
+
+        // Assert
+        assertTrue(result);
+        Mockito.verify(bookApiMock, times(1)).isBookAvailable("AvailableBook");
+    }
+
+    @Test
+    public void isBookAvailable_WhenBookIsNotAvailable_ShouldReturnFalse() {
+        // Arrange
+        BookApi bookApiMock = Mockito.mock(BookApi.class);
+        when(bookApiMock.isBookAvailable("NotAvailableBook")).thenReturn(false);
+
+        BookList bookList = new BookList("MyList", "John Doe", bookApiMock);
+
+        // Act
+        boolean result = bookList.isBookAvailable("NotAvailableBook");
+
+        // Assert
+        assertFalse(result);
+        Mockito.verify(bookApiMock, times(1)).isBookAvailable("NotAvailableBook");
+    }
 }

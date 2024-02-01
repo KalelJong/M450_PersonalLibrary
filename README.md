@@ -10,13 +10,16 @@ Die zu testenden Elemente umfassen:
 
 ### Features to be tested
 Die zu testenden Features sind:
-1. Erstellung neuer Bücherlisten (`NewBookList`)
-2. Entfernen von Bücherlisten (`RemoveBookList`)
-3. Ändern des Namens von Bücherlisten (`ChangeListName`)
-4. Hinzufügen von Büchern zu einer Liste (`AddBook`)
-5. Entfernen von Büchern aus einer Liste (`RemoveBook`)
-6. Ändern des Lesestatus eines Buchs (`ChangeReadStatus`)
-7. 
+1. Erstellung eines neuen Book (`testCreateBook`)
+2. Book zur BookList hinzufügen (`testAddBook`)
+3. Book von BookList entfernen (`testRemoveBook`)
+4. Book von BookList lesen (`testGetBookFromList`)
+5. BookList zur Library hinzufügen (`testAddList`)
+6. BookList:Name von Library ändern (`testChangeListName`)
+7. BookList von Library lesen (`testGetList`)
+8. Book zur BookList von Library hinzufügen (`testAddBookToList`)
+9. BookList von Library entfernen (`testRemoveList`)
+10. Book von BookList von Library ReadStatus ändern (`testChangeReadStatus`)
 
 ### Features not to be tested
 Nicht getestet werden:
@@ -24,7 +27,7 @@ Nicht getestet werden:
 
 ### Approach
 Die Testmethode umfasst:
-- Unit-Tests für alle Methoden jeder Klasse (ausser Getters/Setters).
+- Unit-Tests für alle Methoden jeder Klasse.
 - Manuelle Tests zur Überprüfung der Benutzeroberfläche und Benutzerinteraktion.
 
 ### Item pass / fail criteria
@@ -39,18 +42,15 @@ Test-Artefakte umfassen:
   
 ### Testing Tasks
 Die Teststufen umfassen:
-1. Unit-Tests für jede Klasse und Methode.
-2. Integrationstests für die Zusammenarbeit der Komponenten.
+- Unit-Tests für jede Klasse und Methode.
 
 ### Environmental Needs
 Die Testumgebung erfordert:
 - Eine Entwicklungsumgebung mit den erforderlichen Bibliotheken und Frameworks.
-- Eine Testumgebung, die die Ausführung von Unit- und Integrationstests ermöglicht.
+- Eine Testumgebung, die die Ausführung von Unit-Tests ermöglicht.
 
 ### Schedule
-Die Tests werden gemäss folgendem Zeitplan durchgeführt:
-1. Unit-Tests werden während der Entwicklung kontinuierlich durchgeführt.
-2. Integrationstests werden durchgeführt, sobald die einzelnen Komponenten implementiert sind.
+Tests werden als erst geschrieben und werden während der Entwicklung kontinuierlich durchgeführt.  
 
 ### Weitere Elemente
 Weitere organisatorische Aspekte wie Verantwortlichkeiten, Personal und Abnahmekriterien werden gemäss den Projektanforderungen festgelegt.

@@ -7,11 +7,10 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.*;
 public class BookTest {
-    static Book book;
-    @BeforeAll
-    public static void setUp(){
-        book = new Book("Stories of Lutz", "Zakria Samma", 69, 2023, Book.Status.Reading);
-    }
+    static Book book= new Book("Stories of Lutz", "Zakria Samma", 69, 2023, Book.Status.Reading);;
+//    @BeforeAll
+//    public static void setUp(){
+//    }
 
     @Test
     public void testCreateBook(){

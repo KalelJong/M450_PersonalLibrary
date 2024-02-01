@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bac85918-9b29-493c-993c-fdf01571c499" name="Changes" comment="Refactored Main">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/LibraryApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/BookList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/BookList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/UI.java" beforeDir="false" />
+    <list default="true" id="bac85918-9b29-493c-993c-fdf01571c499" name="Changes" comment="Corrected Tests">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/workflow.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +38,21 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "JUnit.BookListTest.executor": "Run",
+    "JUnit.BookListTest.testAddBook.executor": "Run",
+    "JUnit.BookListTest.testFailAddBookBookExists.executor": "Run",
+    "JUnit.BookListTest.testFailRemoveBookBookNotFound.executor": "Run",
+    "JUnit.BookListTest.testFailRemoveBookListNotFound.executor": "Run",
+    "JUnit.BookListTest.testGetBookFromList.executor": "Run",
+    "JUnit.BookListTest.testRemoveBook.executor": "Run",
     "JUnit.BookTest.createTest.executor": "Run",
+    "JUnit.BookTest.executor": "Run",
+    "JUnit.LibraryTest.executor": "Run",
+    "JUnit.LibraryTest.testAddList.executor": "Run",
+    "JUnit.LibraryTest.testFailAddBookListNotFound.executor": "Run",
+    "JUnit.LibraryTest.testFailChangeReadStatusBookNotFound.executor": "Run",
+    "JUnit.LibraryTest.testFailChangeReadStatusListNotFound.executor": "Run",
+    "JUnit.LibraryTest.testGetBooklist.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -57,41 +67,55 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ext_poekal\Desktop\repos\PersonalLibrary\.github\workflows" />
       <recent name="C:\Users\ext_poekal\Desktop\repos\PersonalLibrary\src\main\java\app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.Main" />
-      <module name="PersonalLibrary" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.UI" />
-      <module name="PersonalLibrary" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BookTest.createTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LibraryTest">
+    <configuration name="LibraryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersonalLibrary" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BookTest" />
-      <option name="METHOD_NAME" value="createTest" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testFailAddBookListNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="METHOD_NAME" value="testFailAddBookListNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testFailChangeReadStatusBookNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="METHOD_NAME" value="testFailChangeReadStatusBookNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testFailChangeReadStatusListNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="METHOD_NAME" value="testFailChangeReadStatusListNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.testGetBooklist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PersonalLibrary" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LibraryTest" />
+      <option name="METHOD_NAME" value="testGetBooklist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,9 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.BookTest.createTest" />
-        <item itemvalue="Application.UI" />
+        <item itemvalue="JUnit.LibraryTest" />
+        <item itemvalue="JUnit.LibraryTest.testFailChangeReadStatusBookNotFound" />
+        <item itemvalue="JUnit.LibraryTest.testFailChangeReadStatusListNotFound" />
+        <item itemvalue="JUnit.LibraryTest.testFailAddBookListNotFound" />
+        <item itemvalue="JUnit.LibraryTest.testGetBooklist" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +147,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706639881976</updated>
       <workItem from="1706639882988" duration="2447000" />
-      <workItem from="1706705176589" duration="1758000" />
+      <workItem from="1706705176589" duration="11695000" />
     </task>
     <task id="LOCAL-00001" summary="Reformed proj">
       <option name="closed" value="true" />
@@ -155,7 +181,31 @@
       <option name="project" value="LOCAL" />
       <updated>1706705605741</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tests">
+      <option name="closed" value="true" />
+      <created>1706738834588</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706738834588</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Changes by Amars">
+      <option name="closed" value="true" />
+      <created>1706738851001</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706738851001</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Corrected Tests">
+      <option name="closed" value="true" />
+      <created>1706780942206</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706780942206</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +214,24 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reformed proj" />
     <MESSAGE value="Refactored Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Main" />
+    <MESSAGE value="Tests" />
+    <MESSAGE value="Changes by Amars" />
+    <MESSAGE value="Corrected Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected Tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/BookListTest.java</url>
+          <line>28</line>
+          <properties class="BookListTest" method="testAddBook">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

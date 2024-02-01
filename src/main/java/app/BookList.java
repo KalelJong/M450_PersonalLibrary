@@ -6,6 +6,16 @@ public class BookList extends ArrayList<Book> {
     private String name;
     private String creator;
 
+    @Override
+    public boolean add(Book book) {
+        for (Book existingBooks: this) {
+            if (existingBooks.getName().equals(book.getName())) {
+                return false;
+            }
+        }
+        return super.add(book);
+    }
+
     public BookList(String name, String creator) {
         this.name = name;
         this.creator = creator;

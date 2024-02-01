@@ -12,8 +12,8 @@ import java.util.*;
 @ExtendWith(MockitoExtension.class)
 public class LibraryTest {
 
-    private Library library;
-    private BookList bookList;
+    private Library library = new Library();
+    private BookList bookList = new BookList("testList", "admin");
     @BeforeAll
     public static void beforeAll(){ }
 

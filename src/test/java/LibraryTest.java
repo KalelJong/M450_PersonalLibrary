@@ -12,7 +12,7 @@ import java.util.*;
 @ExtendWith(MockitoExtension.class)
 public class LibraryTest {
 
-    private Library library = new Library();
+    private static Library library = new Library();
 
     @BeforeEach
     public void setup() {
@@ -32,6 +32,7 @@ public class LibraryTest {
 
     @Test
     public void testFailAddList() {
+        library.add(new BookList("testList", "admin"));
         boolean result = library.add(new BookList("testList", "admin"));
         assertFalse(result);
     }

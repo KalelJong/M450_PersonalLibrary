@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bac85918-9b29-493c-993c-fdf01571c499" name="Changes" comment="Corrected Tests">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/workflow.yaml" afterDir="false" />
+    <list default="true" id="bac85918-9b29-493c-993c-fdf01571c499" name="Changes" comment="Adjusted Commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/LibraryApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/LibraryApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LibraryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,21 +39,27 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "JUnit.All in PersonalLibrary.executor": "Run",
     "JUnit.BookListTest.executor": "Run",
     "JUnit.BookListTest.testAddBook.executor": "Run",
     "JUnit.BookListTest.testFailAddBookBookExists.executor": "Run",
     "JUnit.BookListTest.testFailRemoveBookBookNotFound.executor": "Run",
     "JUnit.BookListTest.testFailRemoveBookListNotFound.executor": "Run",
+    "JUnit.BookListTest.testGetBookByName.executor": "Run",
     "JUnit.BookListTest.testGetBookFromList.executor": "Run",
     "JUnit.BookListTest.testRemoveBook.executor": "Run",
     "JUnit.BookTest.createTest.executor": "Run",
     "JUnit.BookTest.executor": "Run",
     "JUnit.LibraryTest.executor": "Run",
+    "JUnit.LibraryTest.testAddBookToList.executor": "Run",
     "JUnit.LibraryTest.testAddList.executor": "Run",
     "JUnit.LibraryTest.testFailAddBookListNotFound.executor": "Run",
+    "JUnit.LibraryTest.testFailAddBookToList.executor": "Run",
+    "JUnit.LibraryTest.testFailChangeListName.executor": "Run",
     "JUnit.LibraryTest.testFailChangeReadStatusBookNotFound.executor": "Run",
     "JUnit.LibraryTest.testFailChangeReadStatusListNotFound.executor": "Run",
     "JUnit.LibraryTest.testGetBooklist.executor": "Run",
+    "JUnit.LibraryTest.testRemoveList.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -62,6 +69,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,41 +89,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.testFailAddBookListNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.testAddBookToList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersonalLibrary" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LibraryTest" />
-      <option name="METHOD_NAME" value="testFailAddBookListNotFound" />
+      <option name="METHOD_NAME" value="testAddBookToList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.testFailChangeReadStatusBookNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.testFailAddBookToList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersonalLibrary" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LibraryTest" />
-      <option name="METHOD_NAME" value="testFailChangeReadStatusBookNotFound" />
+      <option name="METHOD_NAME" value="testFailAddBookToList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.testFailChangeReadStatusListNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.testFailChangeListName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersonalLibrary" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LibraryTest" />
-      <option name="METHOD_NAME" value="testFailChangeReadStatusListNotFound" />
+      <option name="METHOD_NAME" value="testFailChangeListName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.testGetBooklist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LibraryTest.testRemoveList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PersonalLibrary" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LibraryTest" />
-      <option name="METHOD_NAME" value="testGetBooklist" />
+      <option name="METHOD_NAME" value="testRemoveList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LibraryTest" />
-        <item itemvalue="JUnit.LibraryTest.testFailChangeReadStatusBookNotFound" />
-        <item itemvalue="JUnit.LibraryTest.testFailChangeReadStatusListNotFound" />
-        <item itemvalue="JUnit.LibraryTest.testFailAddBookListNotFound" />
-        <item itemvalue="JUnit.LibraryTest.testGetBooklist" />
+        <item itemvalue="JUnit.LibraryTest.testFailChangeListName" />
+        <item itemvalue="JUnit.LibraryTest.testRemoveList" />
+        <item itemvalue="JUnit.LibraryTest.testAddBookToList" />
+        <item itemvalue="JUnit.LibraryTest.testFailAddBookToList" />
       </list>
     </recent_temporary>
   </component>
@@ -147,7 +155,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706639881976</updated>
       <workItem from="1706639882988" duration="2447000" />
-      <workItem from="1706705176589" duration="11695000" />
+      <workItem from="1706705176589" duration="17168000" />
     </task>
     <task id="LOCAL-00001" summary="Reformed proj">
       <option name="closed" value="true" />
@@ -205,7 +213,71 @@
       <option name="project" value="LOCAL" />
       <updated>1706780942206</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added Pipeline">
+      <option name="closed" value="true" />
+      <created>1706782026321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1706782026321</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added Pipeline">
+      <option name="closed" value="true" />
+      <created>1706782203795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1706782203795</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adjusted Pipeline">
+      <option name="closed" value="true" />
+      <created>1706782377360</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706782377360</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Adjusted Pipeline">
+      <option name="closed" value="true" />
+      <created>1706782431471</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1706782431471</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adjusted Pipeline">
+      <option name="closed" value="true" />
+      <created>1706782587928</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1706782587929</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adjusted Java Version">
+      <option name="closed" value="true" />
+      <created>1706782687566</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706782687566</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adjusted Java Version">
+      <option name="closed" value="true" />
+      <created>1706783041215</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706783041215</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adjusted Commands">
+      <option name="closed" value="true" />
+      <created>1706783331655</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1706783331655</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +289,11 @@
     <MESSAGE value="Tests" />
     <MESSAGE value="Changes by Amars" />
     <MESSAGE value="Corrected Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected Tests" />
+    <MESSAGE value="Added Pipeline" />
+    <MESSAGE value="Adjusted Pipeline" />
+    <MESSAGE value="Adjusted Java Version" />
+    <MESSAGE value="Adjusted Commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Commands" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

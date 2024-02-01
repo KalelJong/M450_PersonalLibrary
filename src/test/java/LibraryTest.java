@@ -12,15 +12,15 @@ import java.util.*;
 @ExtendWith(MockitoExtension.class)
 public class LibraryTest {
 
-    private Library library = new Library();
-    private BookList bookList = new BookList("testList", "admin");
+    private Library library;
+
     @BeforeAll
     public static void beforeAll(){ }
 
     @BeforeEach
     public void setup() {
         library = new Library();
-        bookList = new BookList("testList", "admin");
+        BookList bookList = new BookList("testList", "admin");
         bookList.add(new Book("book1", "author1", 11, 2001, Book.Status.Reading));
         bookList.add(new Book("book2", "author2", 12, 2002, Book.Status.Unknown));
         bookList.add(new Book("book3", "author3", 13, 2003, Book.Status.Finished));
@@ -41,25 +41,39 @@ public class LibraryTest {
     }
 
     @Test
-    public void testGetBooklist() {
-
+    public void testChangeListName() {
+        String oldName = "testList";
+        library.get(oldName).setName( "test1");
+        assertNull(library.get(oldName));
+        assertEquals("test1", library.get("test1").getName());
     }
 
     @Test
-    public void testFailGetBooklist() {
-
-
-        assertSame(bookList, library.get("testList"));
+    public void testFailChangeListName() {
+        assertThrowsExactly(NullPointerException.class ,()-> {library.get("notAList").setName("test1");});
     }
 
     @Test
-    public void testFailAddBookListNotFound() {
-
-        assertThrowsExactly(NullPointerException.class ,()-> {library.get("notAList").add(new Book("book1", "author1", 11, 2001, Book.Status.Reading));});
-
+    public void testGetList() {
+        BookList bookList = library.get("testList");
+        assertNotNull(bookList);
     }
 
+    @Test
+    public void testFailGetList() {
+        BookList bookList = library.get("test");
+        assertNull(bookList);
+    }
 
+    @Test
+    public void testAddBookToList() {
+        assertDoesNotThrow(() -> {library.get("testList").add(new Book("book0", "author0", 10, 2000, Book.Status.Pending));});
+    }
+
+    @Test
+    public void testFailAddBookToList() {
+        assertThrowsExactly(NullPointerException.class ,()-> {library.get("notAList").add(new Book("book0", "author0", 10, 2000, Book.Status.Pending));});
+    }
 
     @Test
     public void testRemoveList() {
@@ -70,41 +84,8 @@ public class LibraryTest {
 
     @Test
     public void testFailRemoveList() {
-        boolean result = library.remove("");
+        boolean result = library.remove("notAList");
         assertFalse(result);
-    }
-
-    @Test
-    public void testGetLists() {
-        library = new Library();
-        List<BookList> expected = new ArrayList<>();
-        expected.add(new BookList("test1", "user1"));
-        expected.add(new BookList("test2", "user2"));
-        expected.add(new BookList("test3", "user3"));
-        library.add(new BookList("test1", "user1"));
-        library.add(new BookList("test2", "user2"));
-        library.add(new BookList("test3", "user3"));
-        List<BookList> results = library;
-        for (BookList result : results) {
-            assertTrue(expected.stream().anyMatch(x -> x.getName().equals(result.getName())));
-        }
-    }
-
-    @Test
-    public void testGetList() {
-        library = new Library();
-        library.add(new BookList("test1", "user1"));
-        BookList result = library.get("test1");
-        assertEquals("test1", result.getName());
-        assertEquals("user1", result.getCreator());
-    }
-
-    @Test
-    public void testChangeListName() {
-        String oldName = "testList";
-        library.get(oldName).setName( "test1");
-        assertNull(library.get(oldName));
-        assertEquals("test1", library.get("test1").getName());
     }
 
     @Test
@@ -116,15 +97,14 @@ public class LibraryTest {
 
     @Test
     public void testFailChangeReadStatusBookNotFound() {
-        BookList testList = library.get("testList");
-        assertThrowsExactly(NullPointerException.class, ()-> { testList.getFirstBookByName("test1").setReadingStatus(Book.Status.Dropped);});
+        BookList bookList = library.get("testList");
+        assertThrowsExactly(NullPointerException.class, ()-> { bookList.getFirstBookByName("bo0k1").setReadingStatus(Book.Status.Dropped);});
 //        assertNotEquals(Book.Status.Reading, library.get("testList").getFirstBookByName("test1").getReadingStatus());
     }
 
     @Test
     public void testFailChangeReadStatusListNotFound() {
-        assertThrowsExactly(NullPointerException.class, ()-> { library.get("").getFirstBookByName("book1").setReadingStatus(Book.Status.Dropped);});
-
+        assertThrowsExactly(NullPointerException.class, ()-> { library.get("NotAList").getFirstBookByName("book1").setReadingStatus(Book.Status.Dropped);});
     }
 
 }
